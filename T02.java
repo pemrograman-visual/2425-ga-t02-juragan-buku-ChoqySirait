@@ -19,6 +19,7 @@ public class JavaApplication {
         ket = input.nextLine();
         hargaP = Double.parseDouble(input.nextLine());
         minimumM = Double.parseDouble(input.nextLine());
+        stok = Integer.parseInt(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
         if (rating >= 4.7 || rating <= 5.0) {
             ket1 = "Best pick";
@@ -39,6 +40,6 @@ public class JavaApplication {
                 }
             }
         }
-        System.out.println(iSBN + "|" + judul + "|" + penerbit + "|" + tahun + "|" + triple + "|" + ket + "|" + hargaP + "|" + minimumM + "|" + rating + "|" + ket1);
+        System.out.println(iSBN + "|" + judul + "|" + penerbit + "|" + tahun + "|" + triple + "|" + ket + "|" + hargaP + "|" + minimumM + "|" + stok + "|" + rating + "|" + ket1);
     }
 }
