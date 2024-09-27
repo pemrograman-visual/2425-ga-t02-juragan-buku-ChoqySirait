@@ -11,7 +11,6 @@ public class T02 {
         int tahun, stok;
         double hargaP, minimumM, rating;
 
-        penerbit = "";
         iSBN = input.nextLine();
         judul = input.nextLine();
         penerbit = input.nextLine();
@@ -22,19 +21,19 @@ public class T02 {
         minimumM = Double.parseDouble(input.nextLine());
         stok = Integer.parseInt(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
-        if (rating >= 4.7 || rating <= 5.0) {
+        if (rating >= 4.7) {
             ket1 = "Best pick";
         } else {
-            if (rating >= 4.5 || rating < 4.7) {
+            if (rating >= 4.5) {
                 ket1 = "Must read";
             } else {
-                if (rating >= 4.0 || rating < 4.5) {
+                if (rating >= 4.0) {
                     ket1 = "Recomended";
                 } else {
-                    if (rating >= 3.0 || rating < 4.0) {
+                    if (rating >= 3.0) {
                         ket1 = "Average";
                     } else {
-                        if (rating < 3.0 || rating >= 0.0) {
+                        if (rating < 3.0) {
                             ket1 = "low";
                         }
                     }
