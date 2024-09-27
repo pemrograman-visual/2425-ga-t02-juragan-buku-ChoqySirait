@@ -11,6 +11,7 @@ public class T02 {
         int tahun, stok;
         double hargaP, minimumM, rating;
 
+        penerbit = "";
         iSBN = input.nextLine();
         judul = input.nextLine();
         penerbit = input.nextLine();
