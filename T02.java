@@ -40,6 +40,11 @@ public class JavaApplication {
                 }
             }
         }
-        System.out.println(iSBN + "|" + judul + "|" + penerbit + "|" + tahun + "|" + triple + "|" + ket + "|" + hargaP + "|" + minimumM + "|" + stok + "|" + rating + "|" + ket1);
+        System.out.println(iSBN + "|" + judul + "|" + penerbit + "|" + tahun + "|" + triple + "|" + ket + "|" + hargaP + "|" + minimumM + "|" + stok + "|" + toFixed(rating,1) + "|" + ket1);
+    }
+    
+    private static String toFixed(double value, int digits) {
+        return String.format("%." + digits + "f", value);
     }
 }
+
