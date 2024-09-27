@@ -3,47 +3,41 @@
 import java.util.*;
 import java.lang.Math;
 
-public class T002 {
+public class T02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String iSBN, judul, penerbit, triple, ket, ket1;
-        int tahun, stok;
-        double hargaP, minimumM, rating;
+        String iSBN, judul, penulis, penerbit, formatBukuElektronik, kategori;
+        int tahunTerbit, stok;
+        double hargaPembelian, minimumMargin, rating;
 
         iSBN = input.nextLine();
         judul = input.nextLine();
+        penulis = input.nextLine();
+        tahunTerbit = Integer.parseInt(input.nextLine());
         penerbit = input.nextLine();
-        tahun = Integer.parseInt(input.nextLine());
-        triple = input.nextLine();
-        ket = input.nextLine();
-        hargaP = Double.parseDouble(input.nextLine());
-        minimumM = Double.parseDouble(input.nextLine());
+        formatBukuElektronik = input.nextLine();
+        hargaPembelian = Double.parseDouble(input.nextLine());
+        minimumMargin = Double.parseDouble(input.nextLine());
         stok = Integer.parseInt(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
         if (rating >= 4.7) {
-            ket1 = "Best pick";
+            kategori = "Best Pick";
         } else {
             if (rating >= 4.5) {
-                ket1 = "Must read";
+                kategori = "Must Read";
             } else {
                 if (rating >= 4.0) {
-                    ket1 = "Recomended";
+                    kategori = "Recommended";
                 } else {
                     if (rating >= 3.0) {
-                        ket1 = "Average";
+                        kategori = "Average";
                     } else {
-                        if (rating < 3.0) {
-                            ket1 = "low";
-                        }
+                        kategori = "Low";
                     }
                 }
             }
         }
-        System.out.println(iSBN + "|" + judul + "|" + penerbit + "|" + tahun + "|" + triple + "|" + ket + "|" + hargaP + "|" + minimumM + "|" + stok + "|" + toFixed(rating,1) + "|" + ket1);
-    }
-    
-    private static String toFixed(double value, int digits) {
-        return String.format("%." + digits + "f", value);
+        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBukuElektronik + "|" + hargaPembelian + "|" + minimumMargin + "|" + stok + "|" + rating + "|" + kategori);
     }
 }
