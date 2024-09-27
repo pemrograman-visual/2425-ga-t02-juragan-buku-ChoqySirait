@@ -7,7 +7,7 @@ public class T02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String iSBN, judul, penerbit, triple, ket, ket1, ket2;
+        String iSBN, judul, penerbit, triple, ket, ket1;
         int tahun, stok;
         double hargaP, minimumM, rating;
 
@@ -47,4 +47,3 @@ public class T02 {
         return String.format("%." + digits + "f", value);
     }
 }
-
